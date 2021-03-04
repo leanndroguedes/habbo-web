@@ -74,6 +74,7 @@ import { HabboWayComponent } from './playing-habbo/habbo-way.component';
 import { AdUnitComponent } from './common/ad-unit/ad-unit.component';
 import { AdDoubleClickComponent } from './common/ad-unit/ad-double-click/ad-double-click.component';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import { LoginModalComponent } from './security/login/login-modal.component';
 
 @NgModule({
   declarations: [
@@ -141,7 +142,8 @@ import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
     HelpComponent,
     HabboWayComponent,
     AdUnitComponent,
-    AdDoubleClickComponent
+    AdDoubleClickComponent,
+    LoginModalComponent
   ],
   imports: [
     BrowserModule,

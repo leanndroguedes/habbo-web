@@ -73,6 +73,7 @@ import { HelpComponent } from './playing-habbo/help.component';
 import { HabboWayComponent } from './playing-habbo/habbo-way.component';
 import { AdUnitComponent } from './common/ad-unit/ad-unit.component';
 import { AdDoubleClickComponent } from './common/ad-unit/ad-double-click/ad-double-click.component';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -156,6 +157,7 @@ import { AdDoubleClickComponent } from './common/ad-unit/ad-double-click/ad-doub
     }),
     MomentModule,
     ReactiveFormsModule,
+    NgbModalModule,
     SharedModule
   ],
   providers: [],

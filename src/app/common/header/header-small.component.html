@@ -1,0 +1,16 @@
+<!-- <habbo-header-ad></habbo-header-ad> -->
+<header class="header__wrapper wrapper">
+  <a routerLink="/" class="header__habbo__logo">
+    <h1 class="header__habbo__name" id="ga-linkid-habbo">Habbo</h1>
+  </a>
+  <habbo-user-menu habbo-require-session class="header__aside header__aside--user-menu"></habbo-user-menu>
+  <div habbo-require-no-session class="header__aside">
+    <button ng-click="openLoginModal()" class="header__login__button">
+      <span class="header__login__icon" translate="LOGIN"></span>
+    </button>
+  </div>
+</header>
+<habbo-navigation active="{{active}}"></habbo-navigation>
+<div class="wrapper">
+  <ng-content></ng-content>
+</div>

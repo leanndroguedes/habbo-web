@@ -1,0 +1,4 @@
+<a routerLink="/profile/{{user}}" class="avatar">
+  <!-- <habbo-imager user="{{user}}" size="{{big ? 'largehead' : 'bighead'}}" class="avatar__image"></habbo-imager> -->
+  <h6 class="avatar__title" [ngClass]="{ 'avatar__title--big': big }">{{user}}</h6>
+</a>

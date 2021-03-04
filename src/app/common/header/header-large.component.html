@@ -1,0 +1,21 @@
+<div habbo-sticky-header class="header__top sticky-header sticky-header--top">
+  <div class="wrapper">
+    <div class="header__top__content">
+      <div>
+        <button (click)="toggle = true;" [disabled]="toggle" [ngClass]="{'ng-hide': toggle}" class="header__top__toggle">{{'LOGIN' | translate}}</button>
+        <div [ngClass]="{'ng-hide': !toggle}" class="header__login-form">
+          <habbo-login-form></habbo-login-form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="header__content">
+  <ng-content></ng-content>
+</div>
+<header class="header__wrapper wrapper">
+  <a href="/" class="header__habbo__logo">
+    <h1 class="header__habbo__name" id="ga-linkid-habbo-large">Habbo</h1>
+  </a>
+</header>
+<habbo-navigation active="{{active}}"></habbo-navigation>

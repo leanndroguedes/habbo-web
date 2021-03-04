@@ -1,0 +1,19 @@
+<table class="transactions-history">
+  <thead>
+    <tr>
+      <th translate="TRANSACTIONS_TABLE_DATE"></th>
+      <th translate="TRANSACTIONS_TABLE_PURCHASE"></th>
+      <th translate="TRANSACTIONS_TABLE_VALUE"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- <tr *ngFor="item in transactions | orderBy: '-creationTime' | limitTo: limitTo track by $index"> -->
+    <tr *ngFor="let item of transactions | slice:0:limitTo">
+      <td attr.data-th="{{'TRANSACTIONS_TABLE_DATE' | translate}}">{{item.creationTime | amDateFormat: 'D MMM YYYY'}}</td>
+      <td attr.data-th="{{'TRANSACTIONS_TABLE_PURCHASE' | translate}}">
+        <span *ngIf="item.product" class="product-name">{{item.product.name}}</span> <span *ngIf="item.credits > 0" class="credits" translate="CREDITS_AMOUNT" [translateParams]="{ value: item.credits }"></span>
+      </td>
+      <td attr.data-th="{{'TRANSACTIONS_TABLE_VALUE' | translate}}">{{item.price}}</td>
+    </tr>
+  </tbody>
+</table>

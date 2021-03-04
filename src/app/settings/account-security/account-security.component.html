@@ -1,0 +1,8 @@
+<h2 translate="ACCOUNT_SECURITY_TITLE"></h2>
+<p [innerHTML]="'ACCOUNT_SECURITY_DESCRIPTION' | translate"></p>
+<habbo-account-security-edit [account-security-status]="accountSecurityStatus"></habbo-account-security-edit>
+<div *ngIf="accountSecurityStatus === 'enabled'" class="account-security__trusted-locations">
+  <h2 translate="ACCOUNT_SECURITY_TRUSTED_LOCATIONS_TITLE"></h2>
+  <p [innerHTML]="'ACCOUNT_SECURITY_TRUSTED_LOCATIONS_DESCRIPTION' | translate"></p>
+  <habbo-trusted-locations-reset></habbo-trusted-locations-reset>
+</div>

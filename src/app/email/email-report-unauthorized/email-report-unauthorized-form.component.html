@@ -1,0 +1,5 @@
+<form (ngSubmit)="report()" name="emailReportUnauthorizedForm" novalidate>
+  <div class="form__footer">
+    <a href="/" class="form__cancel" translate="FORM_CANCEL_LABEL"></a> <button [disabled]="reportInProgress" type="submit" class="form__submit" translate="EMAIL_REPORT_UNAUTHORIZED_BUTTON"></button>
+  </div>
+</form>

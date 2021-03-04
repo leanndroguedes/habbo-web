@@ -1,0 +1,14 @@
+<habbo-message-container *ngIf="accountSecurityStatus === 'enabled'" type="check">
+  <h3 translate="ACCOUNT_SECURITY_STATUS_ENABLED_TITLE"></h3>
+  <div class="account-security__status">
+    <button (click)="openEditModal()" class="account-security__edit" translate="ACCOUNT_SECURITY_EDIT_BUTTON"></button> <button (click)="openDisableModal()" class="account-security__disable" translate="ACCOUNT_SECURITY_DISABLE"></button>
+  </div>
+</habbo-message-container>
+<habbo-message-container *ngIf="accountSecurityStatus === 'disabled'" type="exclamation">
+  <h3 translate="ACCOUNT_SECURITY_STATUS_DISABLED_TITLE"></h3>
+  <button (click)="openEditModal()" class="account-security__enable" translate="ACCOUNT_SECURITY_ENABLE_BUTTON"></button>
+</habbo-message-container>
+<habbo-message-container *ngIf="accountSecurityStatus === 'identity_verification_required'" type="exclamation">
+  <h3 translate="ACCOUNT_SECURITY_STATUS_VERIFICATION_REQUIRED_TITLE"></h3>
+  <a href="/settings/email" translate="ACCOUNT_SECURITY_STATUS_VERIFICATION_REQUIRED_LINK_TEXT"></a>
+</habbo-message-container>

@@ -1,0 +1,11 @@
+<habbo-header-small active="shop"></habbo-header-small>
+<habbo-tabs>
+  <habbo-tab path="/shop" [strict-path]="true" translation-key="SHOP_BUY_TAB"></habbo-tab>
+  <habbo-tab path="/shop/prepaid" translation-key="SHOP_PREPAID_TAB"></habbo-tab>
+  <habbo-tab *ngIf="earnCreditsEnabled" path="/shop/earn-credits" translation-key="SHOP_EARN_CREDITS_TAB"></habbo-tab>
+  <habbo-tab path="/shop/history" translation-key="SHOP_HISTORY_TAB"></habbo-tab>
+</habbo-tabs>
+<main class="wrapper wrapper--content">
+  <router-outlet></router-outlet>
+</main>
+<habbo-shop-footer class="wrapper wrapper--content"></habbo-shop-footer>

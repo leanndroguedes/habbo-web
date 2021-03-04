@@ -1,0 +1,77 @@
+<habbo-header-small class="profile__header">
+  <!-- <habbo-profile-header figure="{{profile.figureString}}" user="{{profile.name}}" motto="{{profile.motto}}" profile="true">
+    <h1>{{profile.name}}</h1>
+    <div *ngIf="profile.motto" class="profile__motto">{{profile.motto}}</div>
+  </habbo-profile-header> -->
+</habbo-header-small>
+<main class="wrapper wrapper--content">
+  <!-- <div *ngIf="items.badges.length > 0 || items.friends.length > 0 || items.rooms.length > 0 || items.groups.length > 0" class="profile__section">
+    <div *ngIf="profile.selectedBadges.length > 0" class="profile__card__wrapper--badges">
+      <section class="profile__card__aligner">
+        <div class="profile__card">
+          <h2 translate="PROFILE_BADGES_TITLE" class="profile__card__title"></h2>
+          <habbo-badge-list [badges]="profile.selectedBadges" class="item-list--grid"></habbo-badge-list>
+          <div class="profile__card__footer">
+            <habbo-profile-modal [items]="items.badges" type="badges"></habbo-profile-modal>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div *ngIf="items.friends.length > 0" class="profile__card__wrapper--friends">
+      <section class="profile__card__aligner">
+        <div class="profile__card">
+          <h2 class="profile__card__title">
+            <span translate="PROFILE_FRIENDS_TITLE"></span> <span class="profile__friends__count" translate="PROFILE_FRIENDS_COUNT" translate-values="{ current: items.friends.length > 5 ? 5 : items.friends.length, all: items.friends.length }"></span>
+          </h2>
+          <habbo-friend-list [friends]="fiveFriends" class="item-list--grid"></habbo-friend-list>
+          <div class="profile__card__footer">
+            <habbo-profile-modal [items]="items.friends" type="friends"></habbo-profile-modal>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div *ngIf="items.rooms.length > 0" class="profile__card__wrapper--rooms">
+      <section class="profile__card__aligner">
+        <div class="profile__card">
+          <h2 translate="PROFILE_ROOMS_TITLE" class="profile__card__title"></h2>
+          <habbo-room-list [rooms]="fiveRooms" class="item-list--grid"></habbo-room-list>
+          <div class="profile__card__footer">
+            <habbo-profile-modal [items]="items.rooms" type="rooms"></habbo-profile-modal>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div *ngIf="items.groups.length > 0" class="profile__card__wrapper--groups">
+      <section class="profile__card__aligner">
+        <div class="profile__card">
+          <h2 translate="PROFILE_GROUPS_TITLE" class="profile__card__title"></h2>
+          <habbo-group-list [groups]="fiveGroups" class="item-list--grid"></habbo-group-list>
+          <div class="profile__card__footer">
+            <habbo-profile-modal [items]="items.groups" type="groups"></habbo-profile-modal>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div> -->
+</main>
+<!-- <section *ngIf="photos.length > 0" class="wrapper wrapper--content">
+  <div class="profile__creations">
+    <h2 class="profile__creations__title" translate="PROFILE_PHOTOS_TITLE"></h2>
+    <habbo-columns-profile [items]="photos"></habbo-columns-profile>
+    <a href="/community/photos" class="profile__photos__link" translate="PHOTOS_TITLE"></a>
+  </div>
+</section> -->
+<!-- <section *ngIf="stories.length > 0" class="wrapper wrapper--content">
+  <div class="profile__creations">
+    <h2 class="profile__creations__title" translate="PROFILE_CREATIONS_TITLE"></h2>
+    <habbo-columns-profile [items]="stories"></habbo-columns-profile>
+  </div>
+</section> -->
+<footer class="wrapper wrapper--content">
+  <!-- <h2 class="profile__joined" translate="PROFILE_JOINED" [translateParams]="{ date: (profile.memberSince | date: 'longDate') }"></h2> -->
+  <div class="profile__hearts">
+    <i class="icon icon--heart"></i>
+    <i class="icon icon--heart"></i>
+    <i class="icon icon--heart"></i>
+  </div>
+</footer>

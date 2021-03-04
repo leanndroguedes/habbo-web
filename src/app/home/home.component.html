@@ -1,0 +1,11 @@
+<habbo-header-small *ngIf="!hasHeaderLarge()" active="home"></habbo-header-small>
+<habbo-header-large *ngIf="hasHeaderLarge()" active="home">
+  <habbo-register-banner></habbo-register-banner>
+</habbo-header-large>
+<habbo-tabs>
+  <habbo-tab path="/" [strict-path]="true" translation-key="HOME_NEWS_TAB"></habbo-tab>
+  <habbo-tab habbo-require-session path="/messaging" translation-key="HOME_MESSAGING_TAB"></habbo-tab>
+</habbo-tabs>
+<main class="wrapper wrapper--content">
+  <router-outlet></router-outlet>
+</main>

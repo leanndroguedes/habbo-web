@@ -1,0 +1,14 @@
+:host {
+  margin: 0;
+  background-color: #0c3a65;
+  color: #7ecaee;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-family: Ubuntu,"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+  font-size: 16px;
+  font-variant-ligatures: common-ligatures;
+  line-height: 1.4;
+  min-height: 100vh
+}

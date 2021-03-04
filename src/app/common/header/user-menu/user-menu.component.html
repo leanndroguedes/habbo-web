@@ -1,0 +1,16 @@
+<div habbo-false-on-outside-click="toggle" class="user-menu">
+  <div class="user-menu__header">
+    <a (click)="toggle = !toggle;" class="user-menu__toggle">
+      <div class="user-menu__name__wrapper">
+        <div class="user-menu__name" [ngClass]="{ 'user-menu__name--open': toggle }">{{user?.name}}</div>
+      </div>
+      <!-- <habbo-imager figure="{{user.figureString}}" name="{{user.name}}" size="bighead" class="user-menu__avatar"></habbo-imager> -->
+    </a>
+  </div>
+  <ul [ngClass]="{'ng-hide': !toggle}" class="user-menu__list">
+    <li class="user-menu__item"><a routerLink="/profile/{{user?.name}}" routerLinkActive="user-menu__link--active" class="user-menu__link user-menu__link--profile" translate="NAVIGATION_PROFILE"></a></li>
+    <li class="user-menu__item"><a routerLink="/settings" routerLinkActive="user-menu__link--active" class="user-menu__link user-menu__link--settings" translate="NAVIGATION_SETTINGS"></a></li>
+    <li class="user-menu__item"><a href="{{'HELP_URL' | translate}}" class="user-menu__link user-menu__link--help" target="_blank" rel="noopener noreferrer" translate="NAVIGATION_HELP"></a></li>
+    <li class="user-menu__item"><a (click)="logout()" class="user-menu__link user-menu__link--logout" translate="NAVIGATION_LOGOUT"></a></li>
+  </ul>
+</div>

@@ -25,6 +25,8 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
+              "src/habbo-web-l10n",
+              "src/web_images",
               "src/assets"
             ],
             "styles": [
@@ -88,6 +90,8 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
+              "src/habbo-web-l10n",
+              "src/web_images",
               "src/assets"
             ],
             "styles": [

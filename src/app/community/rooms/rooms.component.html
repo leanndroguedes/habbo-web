@@ -1,0 +1,28 @@
+<header class="rooms__header">
+  <div class="rooms__header__container wrapper">
+    <div class="rooms__header__image__wrapper">
+      <div class="rooms__header__image"></div>
+    </div>
+    <div class="rooms__header__content">
+      <h1 class="rooms__header__title" translate="ROOMS_TITLE"></h1>
+      <p translate="ROOMS_DESCRIPTION"></p>
+    </div>
+  </div>
+</header>
+<section class="wrapper wrapper--content rooms-wrapper">
+  <div *ngFor="let room of rooms" class="room-item">
+    <a href="/room/{{room.id}}" class="room-item__link">
+      <div class="room-item__thumbnail">
+        <img habbo-remove-on-error class="room-item__thumbnail__image" src="{{room.thumbnailUrl}}">
+      </div>
+    </a>
+    <a href="/room/{{room.id}}" class="room-item__link">
+      <h2 class="room-item__title">{{room.name}}</h2>
+    </a>
+    <p class="room-item__description">{{room.description}}</p>
+    <div [ngSwitch]="room.publicRoom">
+      <official-room-avatar *ngSwitchCase="true" class="room-item__owner--official"></official-room-avatar>
+      <habbo-avatar *ngSwitchCase="false" class="room-item__owner--user" user="{{room.ownerName}}"></habbo-avatar>
+    </div>
+  </div>
+</section>

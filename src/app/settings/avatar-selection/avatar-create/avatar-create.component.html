@@ -1,0 +1,8 @@
+<div class="avatar-create" [ngClass]="{ 'avatar-create--disabled': avatars.length === MAX_AVATARS || (!emailVerified && !identityVerified) }">
+  <div *ngIf="avatars.length < MAX_AVATARS && identityVerified" class="avatar-create__text" translate="AVATAR_CREATE_MORE" [translateParams]="{ count: MAX_AVATARS - avatars.length }"></div>
+  <div *ngIf="!emailVerified && !identityVerified" class="avatar-create__text" translate="AVATAR_CREATE_EMAIL_UNVERIFIED"></div>
+  <div *ngIf="avatars.length === MAX_AVATARS" class="avatar-create__text" translate="AVATAR_CREATE_MAX"></div>
+  <div class="avatar-create__button__wrapper">
+    <button (click)="open()" [disabled]="avatars.length === MAX_AVATARS || (!emailVerified && !identityVerified)" class="avatar-create__button" translate="AVATAR_CREATE_BUTTON"></button>
+  </div>
+</div>

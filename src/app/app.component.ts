@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { CONFIG } from 'src/environments/environment';
 
 @Component({
   selector: 'habbo-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'habbo-web';
+
+  constructor(
+    translate: TranslateService
+  ) {
+    translate.setDefaultLang('com');
+
+    translate.use(CONFIG.localizationSite);
+  }
 }

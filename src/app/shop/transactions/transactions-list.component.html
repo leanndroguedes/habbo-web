@@ -1,0 +1,8 @@
+<div *ngIf="transactions.length > 0">
+  <habbo-transactions-history [transactions]="transactions" [limit-to]="transactionLimit"></habbo-transactions-history>
+  <div class="transactions__footer">
+    <p class="transactions__notice" translate="TRANSACTIONS_NOTICE"></p>
+    <button *ngIf="!hideShowAll && transactions.length > transactionLimit" (click)="showAll()" class="transactions__button" translate="TRANSACTIONS_SHOW_ALL"></button>
+  </div>
+</div>
+<habbo-empty-results *ngIf="transactions.length === 0" translation-key="TRANSACTIONS_EMPTY"></habbo-empty-results>

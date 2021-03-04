@@ -1,0 +1,13 @@
+<nav class="navigation">
+  <ul class="navigation__menu">
+    <li class="navigation__item"><a routerLink="/" routerLinkActive="navigation__link--active" class="navigation__link navigation__link--home" translate="NAVIGATION_HOME" id="ga-linkid-home"></a></li>
+    <li class="navigation__item"><a routerLink="/community" routerLinkActive="navigation__link--active" class="navigation__link navigation__link--community" translate="NAVIGATION_COMMUNITY" id="ga-linkid-community"></a></li>
+    <li class="navigation__item"><a routerLink="/shop" routerLinkActive="navigation__link--active" class="navigation__link navigation__link--shop" translate="NAVIGATION_SHOP" id="ga-linkid-shop"></a></li>
+    <li class="navigation__item"><a routerLink="/playing-habbo" routerLinkActive="navigation__link--active" class="navigation__link navigation__link--playing-habbo" translate="NAVIGATION_PLAYING_HABBO" id="ga-linkid-playing-habbo"></a></li>
+    <li habbo-require-session class="navigation__item navigation__item--aside navigation__item--hotel">
+      <habbo-hotel-button habbo-require-flash></habbo-hotel-button>
+      <habbo-beta-hotel-button style="padding-left: 45px"></habbo-beta-hotel-button>
+      <habbo-hotel-native-button style="padding-left: 45px"></habbo-hotel-native-button>
+    </li>
+  </ul>
+</nav>

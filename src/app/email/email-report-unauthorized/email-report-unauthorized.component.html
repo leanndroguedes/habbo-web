@@ -1,0 +1,11 @@
+<habbo-header-small></habbo-header-small>
+<main class="wrapper wrapper--content">
+  <section class="main">
+    <habbo-message-container type="exclamation">
+      <h2 translate="EMAIL_REPORT_UNAUTHORIZED_TITLE"></h2>
+      <h4 class="email-report-unauthorized-form__email">{{email}}</h4>
+      <p translate="EMAIL_REPORT_UNAUTHORIZED_TEXT"></p>
+      <habbo-email-report-unauthorized-form [emailaddress]="email" [hash]="hash"></habbo-email-report-unauthorized-form>
+    </habbo-message-container>
+  </section>
+</main>

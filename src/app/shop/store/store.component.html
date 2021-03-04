@@ -1,0 +1,17 @@
+<header class="shop__header">
+  <h1 translate="SHOP_TITLE" class="shop__header__title"></h1>
+  <!-- <habbo-shop-countries *ngIf="countries.length > 1" country="inventory.country" countries="countries" class="shop__header__country"></habbo-shop-countries> -->
+</header>
+<section>
+  <div class="main">
+    <!-- <habbo-targeted-offer offer="offer" *ngIf="offer"></habbo-targeted-offer> -->
+    <!-- <habbo-category-filter ng-show="inventory.paymentCategories.length > 0" payment-categories="inventory.paymentCategories" selected-category="selectedCategory"></habbo-category-filter> -->
+    <!-- <habbo-inventory inventory="inventory" selected-category="{{selectedCategory}}"></habbo-inventory> -->
+  </div>
+  <!-- <habbo-purse habbo-require-session class="aside aside--box"></habbo-purse> -->
+  <aside habbo-require-session class="aside aside--box">
+    <h3 translate="SHOP_REDEEM_TITLE"></h3>
+    <!-- <habbo-voucher-redeem></habbo-voucher-redeem> -->
+  </aside>
+  <habbo-web-pages key="common/box_mall_info" class="aside aside--box"></habbo-web-pages>
+</section>

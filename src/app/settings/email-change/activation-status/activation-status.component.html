@@ -1,0 +1,11 @@
+<habbo-message-container *ngIf="user.emailVerified" type="check">
+  <h3 translate="EMAIL_VERIFIED_TITLE" class="activation-status__title"></h3>
+  <p translate="EMAIL_VERIFIED_TEXT" [translateParams]="user" class="activation-status__text"></p>
+</habbo-message-container>
+<habbo-message-container *ngIf="!user.emailVerified" type="exclamation">
+  <h3 translate="ACTIVATION_RESEND_TITLE" class="activation-status__title"></h3>
+  <p translate="ACTIVATION_RESEND_TEXT" [translateParams]="user" class="activation-status__text"></p>
+  <div class="activation-status__controls">
+    <button (click)="resend()" [disabled]="resendInProgress || isSent" class="activation-status__submit" translate="ACTIVATION_RESEND_BUTTON"></button>
+  </div>
+</habbo-message-container>

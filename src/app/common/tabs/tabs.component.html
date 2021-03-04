@@ -1,0 +1,11 @@
+<!-- <nav ng-hide="tabs.length < 2" class="tabs"> -->
+<nav class="tabs">
+  <h1 *ngIf="titleKey" class="tabs__title" translate="{{titleKey}}"></h1>
+  <div (click)="open = !open" class="tabs__toggle">
+    <!-- <div [ngClass]="{'tabs__toggle__title--active': open}" class="tabs__toggle__title" translate="{{activeTab.translationKey}}"></div> -->
+    <div [ngClass]="{'tabs__toggle__title--active': open}" class="tabs__toggle__title" translate=""></div>
+  </div>
+  <ul class="tabs__menu" [ngClass]="{'ng-hide': !open}">
+    <ng-content></ng-content>
+  </ul>
+</nav>

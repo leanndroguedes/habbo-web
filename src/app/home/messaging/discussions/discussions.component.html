@@ -1,0 +1,16 @@
+<ul *ngIf="items.length > 0">
+  <li *ngFor="let discussion of items" class="discussions__item">
+    <div class="discussions__participant">
+      <habbo-avatar user="{{getParticipant(discussion.participants).name}}" big="true"></habbo-avatar>
+    </div>
+    <div class="discussions__wrapper">
+      <h6 *ngIf="discussion.messages.length > 0" class="discussions__timeago">{{discussion.latestTime | amTimeAgo}}</h6>
+      <ul>
+        <li *ngFor="let message of discussion.messages | slice:0:3" class="discussions__message">
+          <p class="discussions__text">{{message.message}}</p><time class="discussions__date"><small>{{message.sendTime | date: 'medium'}}</small></time>
+        </li>
+      </ul><a href="/hotel?link=friendlist/openchat/{{discussion.discussionId}}" habbo-require-flash translate="DISCUSSIONS_REPLY" class="discussions__reply"></a>
+    </div>
+  </li>
+</ul>
+<habbo-empty-results *ngIf="items.length === 0" translation-key="DISCUSSIONS_EMPTY"></habbo-empty-results>

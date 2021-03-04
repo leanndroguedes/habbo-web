@@ -1,0 +1,15 @@
+<habbo-header-small active="settings"></habbo-header-small>
+<habbo-tabs title-key="SETTINGS_TITLE">
+  <habbo-tab path="/settings/privacy" translation-key="SETTINGS_PRIVACY_TAB"></habbo-tab>
+  <habbo-tab habbo-require-habbo-session-with-email path="/settings/security" translation-key="SETTINGS_ACCOUNT_SECURITY_TAB"></habbo-tab>
+  <habbo-tab habbo-require-habbo-session-with-email path="/settings/password" translation-key="SETTINGS_PASSWORD_TAB"></habbo-tab>
+  <habbo-tab habbo-require-habbo-session-with-email path="/settings/email" translation-key="SETTINGS_EMAIL_TAB"></habbo-tab>
+  <habbo-tab path="/settings/avatars" translation-key="SETTINGS_AVATAR_TAB"></habbo-tab>
+</habbo-tabs>
+<main class="wrapper wrapper--content">
+  <section class="main">
+    <router-outlet></router-outlet>
+  </section>
+  <habbo-web-pages key="common/box_learn_how_to_stay_safe" class="aside aside--box aside--push-down"></habbo-web-pages>
+  <habbo-web-pages key="common/box_need_help" class="aside aside--box"></habbo-web-pages>
+</main>

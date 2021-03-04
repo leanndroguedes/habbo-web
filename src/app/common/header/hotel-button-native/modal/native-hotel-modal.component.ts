@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'habbo-native-hotel-modal',
@@ -8,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NativeHotelModalComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public ngbActiveModal: NgbActiveModal
+  ) { }
 
   ngOnInit(): void {
   }

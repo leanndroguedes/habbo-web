@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NativeHotelModalComponent } from './modal/native-hotel-modal.component';
 
 @Component({
   selector: 'habbo-hotel-native-button',
@@ -14,9 +16,15 @@ export class HotelButtonNativeComponent implements OnInit {
     v4?: boolean
   } = { v2: true, v4: true };
 
-  constructor() { }
+  constructor(
+    private ngbModal: NgbModal
+  ) { }
 
   open(): void {
+    this.ngbModal.open(NativeHotelModalComponent, {
+      size: 'md',
+      windowClass: 'hotel-button-native-modal'
+    });
   }
 
   ngOnInit(): void {

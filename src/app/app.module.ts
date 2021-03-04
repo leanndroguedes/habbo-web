@@ -75,6 +75,7 @@ import { AdUnitComponent } from './common/ad-unit/ad-unit.component';
 import { AdDoubleClickComponent } from './common/ad-unit/ad-double-click/ad-double-click.component';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginModalComponent } from './security/login/login-modal.component';
+import { AvatarCreateModalComponent } from './settings/avatar-selection/avatar-create/avatar-create-modal.component';
 
 @NgModule({
   declarations: [
@@ -143,7 +144,8 @@ import { LoginModalComponent } from './security/login/login-modal.component';
     HabboWayComponent,
     AdUnitComponent,
     AdDoubleClickComponent,
-    LoginModalComponent
+    LoginModalComponent,
+    AvatarCreateModalComponent
   ],
   imports: [
     BrowserModule,

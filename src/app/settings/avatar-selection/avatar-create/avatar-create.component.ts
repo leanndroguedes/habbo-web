@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Avatars } from 'src/app/shared/avatars.model';
+import { AvatarCreateModalComponent } from './avatar-create-modal.component';
 
 @Component({
   selector: 'habbo-avatar-create',
@@ -14,9 +16,14 @@ export class AvatarCreateComponent implements OnInit {
   identityVerified = JSON.parse(sessionStorage.getItem('session') || '{}').identityVerified;
   MAX_AVATARS = 50;
 
-  constructor() { }
+  constructor(
+    private ngbModal: NgbModal
+  ) { }
 
   open(): void {
+    this.ngbModal.open(AvatarCreateModalComponent, {
+      size: 'sm'
+    });
   }
 
   ngOnInit(): void {

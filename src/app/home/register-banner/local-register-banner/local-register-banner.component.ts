@@ -85,7 +85,7 @@ export class LocalRegisterBannerComponent implements OnInit {
 
   ngOnInit(): void {
     const language = this.toSite();
-    if (language && language.hotel === CONFIG.hotel) {
+    if (language && language.hotel !== CONFIG.hotel) {
       this.site = language;
     }
   }

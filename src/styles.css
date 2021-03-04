@@ -1,2 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("./app.a6bbb86c.css");
+/* CSS supports NgbModal */
+.fade.show .modal-content {
+  opacity: 1;
+  transform: scale(1)
+}
+
+.modal-backdrop.show {
+  opacity: .9
+}
+
+.modal.lightbox-modal.show .modal-dialog {
+  opacity: 1
+}
+
+.modal.spinner.show .modal-dialog {
+  opacity: 1
+}
+
+.d-block {
+  display: block
+}

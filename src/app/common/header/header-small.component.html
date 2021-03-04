@@ -5,7 +5,7 @@
   </a>
   <habbo-user-menu habbo-require-session class="header__aside header__aside--user-menu"></habbo-user-menu>
   <div habbo-require-no-session class="header__aside">
-    <button ng-click="openLoginModal()" class="header__login__button">
+    <button (click)="openLoginModal()" class="header__login__button">
       <span class="header__login__icon" translate="LOGIN"></span>
     </button>
   </div>

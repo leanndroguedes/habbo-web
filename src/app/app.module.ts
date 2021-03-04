@@ -76,6 +76,7 @@ import { AdDoubleClickComponent } from './common/ad-unit/ad-double-click/ad-doub
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginModalComponent } from './security/login/login-modal.component';
 import { AvatarCreateModalComponent } from './settings/avatar-selection/avatar-create/avatar-create-modal.component';
+import { SafetyLockDisableModalComponent } from './settings/account-security/safety-lock-disable-modal/safety-lock-disable-modal.component';
 
 @NgModule({
   declarations: [
@@ -145,7 +146,8 @@ import { AvatarCreateModalComponent } from './settings/avatar-selection/avatar-c
     AdUnitComponent,
     AdDoubleClickComponent,
     LoginModalComponent,
-    AvatarCreateModalComponent
+    AvatarCreateModalComponent,
+    SafetyLockDisableModalComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { SafetyLockDisableModalComponent } from './safety-lock-disable-modal/safety-lock-disable-modal.component';
+import { SafetyQuestionsModalComponent } from './safety-questions/safety-questions-modal.component';
 
 @Component({
   selector: 'habbo-account-security-edit',
@@ -11,12 +14,16 @@ export class AccountSecurityEditComponent implements OnInit {
   @Input('account-security-status')
   accountSecurityStatus!: string;
 
-  constructor() { }
+  constructor(
+    private ngbModal: NgbModal
+  ) { }
 
   openEditModal(): void {
+    this.ngbModal.open(SafetyQuestionsModalComponent);
   }
 
   openDisableModal(): void {
+    this.ngbModal.open(SafetyLockDisableModalComponent);
   }
 
   ngOnInit(): void {

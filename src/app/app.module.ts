@@ -79,6 +79,7 @@ import { AvatarCreateModalComponent } from './settings/avatar-selection/avatar-c
 import { SafetyQuestionsModalComponent } from './settings/account-security/safety-questions/safety-questions-modal.component';
 import { SafetyLockDisableModalComponent } from './settings/account-security/safety-lock-disable-modal/safety-lock-disable-modal.component';
 import { ModerationNotificationComponent } from './home/news/moderation-notification/moderation-notification.component';
+import { PurseComponent } from './shop/purse/purse.component';
 
 @NgModule({
   declarations: [
@@ -151,7 +152,8 @@ import { ModerationNotificationComponent } from './home/news/moderation-notifica
     AvatarCreateModalComponent,
     SafetyQuestionsModalComponent,
     SafetyLockDisableModalComponent,
-    ModerationNotificationComponent
+    ModerationNotificationComponent,
+    PurseComponent
   ],
   imports: [
     BrowserModule,

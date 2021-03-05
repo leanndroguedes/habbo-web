@@ -1,0 +1,18 @@
+<aside>
+  <h3 translate="SHOP_PURSE_TITLE"></h3>
+  <div class="purse">
+    <div class="purse__columns">
+      <div class="purse__column">
+        <div translate="SHOP_PURSE_CREDITS" [translateParams]="{ creditBalance: purse.creditBalance }" class="purse__item purse__item--credits"></div>
+        <div translate="SHOP_PURSE_DIAMONDS" [translateParams]="{ diamondBalance: purse.diamondBalance }" class="purse__item purse__item--diamonds"></div>
+      </div>
+      <div class="purse__column">
+        <div class="purse__item purse__item--habbo-club"><span *ngIf="purse.habboClubDays !== 0" translate="SHOP_PURSE_HC_DAYS" [translateParams]="{ habboClubDays: purse.habboClubDays }"></span> <span *ngIf="purse.habboClubDays === 0" translate="SHOP_PURSE_NO_HC"></span></div>
+        <div class="purse__item purse__item--builders-club"><span *ngIf="purse.buildersClubDays !== 0" translate="SHOP_PURSE_BC_DAYS" [translateParams]="{ buildersClubDays: purse.buildersClubDays }"></span> <span *ngIf="purse.buildersClubDays === 0" translate="SHOP_PURSE_NO_BC"></span></div>
+      </div>
+    </div>
+  </div>
+  <div class="purse__footer">
+    <a href="/hotel?link=habboUI/open/hccenter" class="purse__hc-center" translate="SHOP_PURSE_HC_LINK"></a>
+  </div>
+</aside>

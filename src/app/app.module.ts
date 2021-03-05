@@ -78,6 +78,7 @@ import { LoginModalComponent } from './security/login/login-modal.component';
 import { AvatarCreateModalComponent } from './settings/avatar-selection/avatar-create/avatar-create-modal.component';
 import { SafetyQuestionsModalComponent } from './settings/account-security/safety-questions/safety-questions-modal.component';
 import { SafetyLockDisableModalComponent } from './settings/account-security/safety-lock-disable-modal/safety-lock-disable-modal.component';
+import { ModerationNotificationComponent } from './home/news/moderation-notification/moderation-notification.component';
 
 @NgModule({
   declarations: [
@@ -149,7 +150,8 @@ import { SafetyLockDisableModalComponent } from './settings/account-security/saf
     LoginModalComponent,
     AvatarCreateModalComponent,
     SafetyQuestionsModalComponent,
-    SafetyLockDisableModalComponent
+    SafetyLockDisableModalComponent,
+    ModerationNotificationComponent
   ],
   imports: [
     BrowserModule,

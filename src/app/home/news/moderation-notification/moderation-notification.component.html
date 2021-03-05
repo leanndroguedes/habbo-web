@@ -1,0 +1,8 @@
+<habbo-message-container *ngIf="moderations.length > 0" type="exclamation" class="moderation-notification static-content">
+  <h3 translate="MODERATION_MESSAGE_TITLE"></h3>
+  <p translate="MODERATION_MESSAGE_TEXT" [translateParams]="{moderationCount: moderations.length}"></p>
+  <ul>
+    <li *ngFor="let moderation of moderations">{{moderation.createdAt | date: "fullDate" }}</li>
+  </ul>
+  <p [innerHTML]="'MODERATION_MESSAGE_INSTRUCTIONS' | translate"></p>
+</habbo-message-container>

@@ -7,8 +7,10 @@ import { Component, Input, OnInit } from '@angular/core';
   ]
 })
 export class AvatarComponent implements OnInit {
-  @Input() big!: string;
-  @Input() user!: string;
+  @Input()
+  big!: string;
+  @Input()
+  user!: string;
 
   constructor() { }
 

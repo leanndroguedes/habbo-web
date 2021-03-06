@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class FooterComponent implements OnInit {
-  links = ['FOOTER_SUPPORT', 'FOOTER_SAFETY', 'FOOTER_PARENTS', 'FOOTER_TOS_AND_PRIVACY', 'FOOTER_ADVERTISERS'];
+  links = [
+    'FOOTER_SUPPORT',
+    'FOOTER_SAFETY',
+    'FOOTER_PARENTS',
+    'FOOTER_TOS_AND_PRIVACY',
+    'FOOTER_ADVERTISERS'
+  ];
   currentYear = new Date().getFullYear();
 
   constructor() { }

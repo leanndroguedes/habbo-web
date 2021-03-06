@@ -10,7 +10,8 @@ import { AvatarCreateModalComponent } from './avatar-create-modal.component';
   ]
 })
 export class AvatarCreateComponent implements OnInit {
-  @Input() avatars!: Avatars[];
+  @Input()
+  avatars!: Avatars[];
 
   emailVerified = JSON.parse(sessionStorage.getItem('session') || '{}').emailVerified;
   identityVerified = JSON.parse(sessionStorage.getItem('session') || '{}').identityVerified;

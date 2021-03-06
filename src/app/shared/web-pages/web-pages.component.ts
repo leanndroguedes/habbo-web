@@ -13,7 +13,8 @@ import { Component, Input, OnInit } from '@angular/core';
   ]
 })
 export class WebPagesComponent implements OnInit {
-  @Input() key!: string;
+  @Input()
+  key!: string;
 
   constructor() { }
 

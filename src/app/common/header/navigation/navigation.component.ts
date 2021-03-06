@@ -7,7 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
   ]
 })
 export class NavigationComponent implements OnInit {
-  @Input() active?: string;
+  @Input()
+  active?: string;
 
   constructor() { }
 

@@ -8,9 +8,11 @@ import { History } from 'src/app/shared/history.model';
   ]
 })
 export class TransactionsHistoryComponent implements OnInit {
-  @Input() transactions: History[] = [];
+  @Input()
+  transactions: History[] = [];
   // tslint:disable-next-line: no-input-rename
-  @Input('limit-to') limitTo!: number;
+  @Input('limit-to')
+  limitTo!: number;
 
   constructor() { }
 

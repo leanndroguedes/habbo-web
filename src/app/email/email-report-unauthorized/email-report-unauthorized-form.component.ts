@@ -7,8 +7,10 @@ import { Component, Input, OnInit } from '@angular/core';
   ]
 })
 export class EmailReportUnauthorizedFormComponent implements OnInit {
-  @Input() emailaddress!: string;
-  @Input() hash!: string;
+  @Input()
+  emailaddress!: string;
+  @Input()
+  hash!: string;
 
   reportInProgress = false;
 

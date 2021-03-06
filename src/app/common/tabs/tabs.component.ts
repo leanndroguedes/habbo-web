@@ -10,6 +10,7 @@ export class TabsComponent implements OnInit {
   // tslint:disable-next-line: no-input-rename
   @Input('title-key')
   titleKey!: string;
+
   open = false;
 
   constructor() { }

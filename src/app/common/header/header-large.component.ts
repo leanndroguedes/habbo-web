@@ -7,8 +7,10 @@ import { Component, Input, OnInit } from '@angular/core';
   ]
 })
 export class HeaderLargeComponent implements OnInit {
+  @Input()
+  active?: string;
+
   toggle = false;
-  @Input() active?: string;
 
   constructor() { }
 

@@ -8,7 +8,8 @@ import { Discussions, Hhbr13E9E7753A5F857704Fdbd86D8C79B23, Participants } from 
   ]
 })
 export class DiscussionsComponent implements OnInit {
-  @Input() items: Discussions[] = [];
+  @Input()
+  items: Discussions[] = [];
 
   constructor() { }
 

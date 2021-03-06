@@ -8,7 +8,8 @@ import { History } from 'src/app/shared/history.model';
   ]
 })
 export class TransactionsListComponent implements OnInit {
-  @Input() transactions: History[] = [];
+  @Input()
+  transactions: History[] = [];
 
   transactionLimit = 10;
   hideShowAll = false;

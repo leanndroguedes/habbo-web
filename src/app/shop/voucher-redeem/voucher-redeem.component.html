@@ -1,0 +1,27 @@
+<!-- <p>voucher-redeem works!</p> -->
+<form (ngSubmit)="redeem()" name="voucherRedeemForm" #voucherRedeemForm="ngForm" novalidate class="form">
+  <button [disabled]="redeemInProgress" type="submit" translate="SHOP_REDEEM_BUTTON" class="form__submit form__submit--inline"></button>
+  <fieldset class="form__fieldset form__fieldset--inline">
+    <div class="form__field">
+      <input placeholder="{{'SHOP_REDEEM_PLACEHOLDER' | translate}}" name="voucherCode" [formControl]="voucherCode" pattern="/^[a-z0-9]{8}$/i" required autocomplete="off" habbo-remote-data="['nonexistent', 'redeemed', 'failed']" class="form__input voucher-redeem__input">
+      <div *ngIf="voucherCode.invalid && (!voucherCode.pristine || voucherRedeemForm.submitted)" class="form__popover form__popover--error form__popover--inline">
+        <div *ngIf="voucherCode.errors?.required">
+          {{'ERROR_FIELD_REQUIRED' | translate}}
+        </div>
+        <div *ngIf="voucherCode.errors?.pattern">
+          {{'ERROR_VOUCHER_CODE_PATTERN' | translate}}
+        </div>
+        <div *ngIf="voucherCode.errors?.remoteDataNonexistent">
+          {{'ERROR_VOUCHER_CODE_NONEXISTENT' | translate}}
+        </div>
+        <div *ngIf="voucherCode.errors?.remoteDataRedeemed">
+          {{'ERROR_VOUCHER_CODE_REDEEMED' | translate}}
+        </div>
+        <div *ngIf="voucherCode.errors?.remoteDataFailed">
+          {{'ERROR_VOUCHER_CODE_FAILED' | translate}}
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  <small class="form__helper" [innerHTML]="'PREPAID_ORDER_INSTRUCTION' | translate"></small>
+</form>

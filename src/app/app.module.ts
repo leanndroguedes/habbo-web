@@ -57,7 +57,7 @@ import { ActivationStatusComponent } from './settings/email-change/activation-st
 import { TrustedLocationsResetComponent } from './settings/account-security/trusted-locations-reset.component';
 import { AccountSecurityEditComponent } from './settings/account-security/account-security-edit.component';
 import { EmailReportUnauthorizedComponent } from './email/email-report-unauthorized/email-report-unauthorized.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EmailReportUnauthorizedFormComponent } from './email/email-report-unauthorized/email-report-unauthorized-form.component';
 import { EmailOptoutSuccessComponent } from './email/email-optout-success/email-optout-success.component';
 import { PasswordResetComponent } from './password-reset/password-reset.component';
@@ -80,6 +80,7 @@ import { SafetyQuestionsModalComponent } from './settings/account-security/safet
 import { SafetyLockDisableModalComponent } from './settings/account-security/safety-lock-disable-modal/safety-lock-disable-modal.component';
 import { ModerationNotificationComponent } from './home/news/moderation-notification/moderation-notification.component';
 import { PurseComponent } from './shop/purse/purse.component';
+import { VoucherRedeemComponent } from './shop/voucher-redeem/voucher-redeem.component';
 
 @NgModule({
   declarations: [
@@ -153,7 +154,8 @@ import { PurseComponent } from './shop/purse/purse.component';
     SafetyQuestionsModalComponent,
     SafetyLockDisableModalComponent,
     ModerationNotificationComponent,
-    PurseComponent
+    PurseComponent,
+    VoucherRedeemComponent
   ],
   imports: [
     BrowserModule,
@@ -168,6 +170,7 @@ import { PurseComponent } from './shop/purse/purse.component';
       }
     }),
     MomentModule,
+    FormsModule,
     ReactiveFormsModule,
     NgbModalModule,
     SharedModule

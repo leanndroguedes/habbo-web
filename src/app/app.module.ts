@@ -81,6 +81,7 @@ import { SafetyLockDisableModalComponent } from './settings/account-security/saf
 import { ModerationNotificationComponent } from './home/news/moderation-notification/moderation-notification.component';
 import { PurseComponent } from './shop/purse/purse.component';
 import { VoucherRedeemComponent } from './shop/voucher-redeem/voucher-redeem.component';
+import { RegistrationFormComponent } from './registration/registration-form.component';
 
 @NgModule({
   declarations: [
@@ -155,7 +156,8 @@ import { VoucherRedeemComponent } from './shop/voucher-redeem/voucher-redeem.com
     SafetyLockDisableModalComponent,
     ModerationNotificationComponent,
     PurseComponent,
-    VoucherRedeemComponent
+    VoucherRedeemComponent,
+    RegistrationFormComponent
   ],
   imports: [
     BrowserModule,

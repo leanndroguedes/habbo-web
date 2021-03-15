@@ -1,0 +1,22 @@
+<h1 translate="REGISTRATION_TITLE"></h1>
+<form (ngSubmit)="register()" name="registrationForm" novalidate class="form form--left registration-form">
+  <!-- <div class="registration-form__social__wrapper">
+    <div class="registration-form__social">
+      <h3 class="registration-form__connect" translate="REGISTRATION_SOCIAL"></h3>
+      <habbo-facebook-connect [on-login]="fbRegister()" type="large" translation-key="FACEBOOK_CONNECT"></habbo-facebook-connect>
+    </div>
+  </div> -->
+  <!-- <habbo-email-address [email-address]="registration.email">
+    <label for="email-address" class="form__label" translate="FORM_EMAIL_LABEL"></label>
+    <p translate="EMAIL_NEW_HELP"></p>
+  </habbo-email-address> -->
+  <!-- <habbo-password-new [password-new]="registration.password" [password-new-repeated]="registration.passwordRepeated" user-email="{{registration.email}}"></habbo-password-new> -->
+  <!-- <habbo-birthdate [birthdate]="registration.birthdate"></habbo-birthdate> -->
+  <!-- <habbo-policies [policies]="registration"></habbo-policies> -->
+  <!-- <habbo-captcha *ngIf="!hasCaptchaToken" [captcha-token]="registration.captchaToken"></habbo-captcha> -->
+  <p class="registration-form__safety" [innerHTML]="'REGISTRATION_SAFETY' | translate"></p>
+  <div class="form__footer">
+    <button [disabled]="registerInProgress" type="submit" class="form__submit registration-form__button" translate="REGISTRATION_BUTTON"></button>
+  </div>
+  <p class="registration-form__purchases" translate="REGISTRATION_PURCHASES"></p>
+</form>

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class RegistrationComponent implements OnInit {
-  isOpen = false;
+  isOpen = true;
 
   constructor() { }
 

@@ -1,1 +1,27 @@
-<p>login-form works!</p>
+<form (ngSubmit)="login()" name="loginForm" novalidate habbo-shake class="login-form__form">
+  <fieldset class="form__fieldset login-form__fieldset">
+    <div class="form__field">
+      <input name="email" type="email" [formControl]="email" required habbo-email habbo-remote-data="'credentials'" autofocus placeholder="{{'FORM_EMAIL_LABEL' | translate}}" class="form__input login-form__input">
+    </div>
+  </fieldset>
+  <fieldset class="form__fieldset login-form__fieldset">
+    <div class="form__field">
+      <input name="password" type="password" [formControl]="password" required habbo-remote-data="'credentials'" placeholder="{{'FORM_PASSWORD_LABEL' | translate}}" class="form__input login-form__input">
+    </div>
+    <!-- <habbo-claim-password class="form__helper login-form__helper"></habbo-claim-password> -->
+  </fieldset>
+  <button [disabled]="loginInProgress" type="submit" class="login-form__button" translate="LOGIN_BUTTON"></button>
+</form>
+<div class="login-form__social">
+  <!-- <habbo-facebook-connect on-login="onLogin()" type="large" translation-key="FACEBOOK_LOGIN"></habbo-facebook-connect> -->
+  <!-- <habbo-facebook-connect on-login="onLogin()" type="small"></habbo-facebook-connect> -->
+  <div class="login-form__facebook-text">
+    <div>{{ 'FACEBOOK_LOGIN_EXPLANATION' | translate }}</div>
+    <div>
+      <!-- <habbo-rpx-login></habbo-rpx-login> -->
+    </div>
+  </div>
+</div>
+<div class="login-form__register">
+  <a routerLink="/registration" habbo-android-download-link habbo-ios-download-link translate="LOGIN_REGISTER"></a>
+</div>

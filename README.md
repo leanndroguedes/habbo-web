@@ -1,4 +1,35 @@
-# HabboWeb
+<h1 align="center">
+	<img src="src/assets/images/app_icon-196x196.69c3a476.png" alt="Habbo Web clone" width="100" height="100"/><br>
+ Habbo Web clone
+</h1>
+
+<p align="center"><strong>A Habbo Web clone ("working in progress")</strong></p>
+
+<p align="center">The open source Habbo.com clone remade with Angular 2+. All languages ​​included!</p>
+
+![Screenshot of the theme](screenshot.png)
+
+## Available hotel location languages
+
+* habbo.de `DE`
+* habbo.com `EN`
+* habbo.es `ES`
+* habbo.fr `FR`
+* habbo.fi `FI`
+* habbo.it `IT`
+* habbo.nl `NL`
+* habbo.com.br `PT`
+* habbo.com.tr `TR`
+
+To change the language, change the domain to the domain related to the language of your choice in the file `src/environments/environment.ts` in the `localizationSite` property.
+
+```javascript
+export const CONFIG = {
+  localizationSite: 'com',
+};
+```
+
+## Description
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
 

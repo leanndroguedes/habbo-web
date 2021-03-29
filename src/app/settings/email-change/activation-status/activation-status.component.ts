@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NotifierService } from 'src/app/shared/notifier.service';
 
 @Component({
   selector: 'habbo-activation-status',
@@ -11,9 +12,13 @@ export class ActivationStatusComponent implements OnInit {
   resendInProgress = false;
   isSent = false;
 
-  constructor() { }
+  constructor(
+    private notifier: NotifierService
+  ) { }
 
   resend(): void {
+    this.resendInProgress = true;
+    this.notifier.success('ACTIVATION_RESEND_SUCESS');
   }
 
   ngOnInit(): void {

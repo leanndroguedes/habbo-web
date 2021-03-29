@@ -1,0 +1,19 @@
+<form (ngSubmit)="create()" name="avatarCreateForm" #avatarCreateForm="ngForm" novalidate class="form avatar-create-form">
+  <fieldset class="form__fieldset">
+    <label for="avatar-name" class="form__label" translate="AVATAR_CREATE_LABEL"></label>
+    <div class="form__field">
+      <input id="avatar-name" name="name" [formControl]="name" required ng-minlength="3" ng-maxlength="15" ng-pattern="/^[a-zA-Z0-9_\\-\\=\\?\\!@\\:\\.,\\]+/" ng-trim="true" habbo-avatar-name-check autofocus class="form__input">
+      <div *ngIf="name?.invalid && (!name?.pristine || avatarCreateForm.submitted)" class="form__popover form__popover--error">
+        <div *ngIf="name.errors?.required">{{'ERROR_FIELD_REQUIRED' | translate}}</div>
+        <div *ngIf="name.errors?.minlength">{{'ERROR_FIELD_MINLENGTH' | translate: '{ min: 3 }'}}</div>
+        <div *ngIf="name.errors?.maxlength">{{'ERROR_FIELD_MAXLENGTH' | translate: '{ max: 15 }'}}</div>
+        <div *ngIf="name.errors?.pattern">{{'ERROR_FIELD_NAME_FORMAT' | translate}}</div>
+        <!-- <div *ngIf="name">{{'ERROR_FIELD_NAME_TAKEN' | translate}}</div> -->
+      </div>
+    </div>
+    <small class="form__helper" translate="AVATAR_CREATE_HELP"></small>
+  </fieldset>
+  <div class="form__footer">
+    <a (click)="onCancel()" class="form__cancel" translate="FORM_CANCEL_LABEL"></a> <button [disabled]="createInProgress" type="submit" translate="FORM_BUTTON_CREATE" class="form__submit"></button>
+  </div>
+</form>

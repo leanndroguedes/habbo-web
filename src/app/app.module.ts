@@ -82,6 +82,7 @@ import { ModerationNotificationComponent } from './home/news/moderation-notifica
 import { PurseComponent } from './shop/purse/purse.component';
 import { VoucherRedeemComponent } from './shop/voucher-redeem/voucher-redeem.component';
 import { RegistrationFormComponent } from './registration/registration-form.component';
+import { AvatarCreateFormComponent } from './settings/avatar-selection/avatar-create/avatar-create-form.component';
 
 @NgModule({
   declarations: [
@@ -157,7 +158,8 @@ import { RegistrationFormComponent } from './registration/registration-form.comp
     ModerationNotificationComponent,
     PurseComponent,
     VoucherRedeemComponent,
-    RegistrationFormComponent
+    RegistrationFormComponent,
+    AvatarCreateFormComponent
   ],
   imports: [
     BrowserModule,

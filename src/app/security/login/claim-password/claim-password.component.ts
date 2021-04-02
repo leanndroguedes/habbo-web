@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ClaimPasswordModalComponent } from './claim-password-modal.component';
 
 @Component({
   selector: 'habbo-claim-password',
@@ -10,9 +12,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClaimPasswordComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private ngbModal: NgbModal
+  ) { }
 
   openModal(): void {
+    this.ngbModal.open(ClaimPasswordModalComponent, {
+      size: 'sm'
+    });
   }
 
   ngOnInit(): void {

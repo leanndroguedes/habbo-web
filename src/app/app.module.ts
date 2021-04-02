@@ -84,6 +84,7 @@ import { VoucherRedeemComponent } from './shop/voucher-redeem/voucher-redeem.com
 import { RegistrationFormComponent } from './registration/registration-form.component';
 import { AvatarCreateFormComponent } from './settings/avatar-selection/avatar-create/avatar-create-form.component';
 import { ClaimPasswordComponent } from './security/login/claim-password/claim-password.component';
+import { ClaimPasswordModalComponent } from './security/login/claim-password/claim-password-modal.component';
 
 @NgModule({
   declarations: [
@@ -161,7 +162,8 @@ import { ClaimPasswordComponent } from './security/login/claim-password/claim-pa
     VoucherRedeemComponent,
     RegistrationFormComponent,
     AvatarCreateFormComponent,
-    ClaimPasswordComponent
+    ClaimPasswordComponent,
+    ClaimPasswordModalComponent
   ],
   imports: [
     BrowserModule,

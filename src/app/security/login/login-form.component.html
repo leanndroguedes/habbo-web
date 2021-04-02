@@ -8,7 +8,7 @@
     <div class="form__field">
       <input name="password" type="password" [formControl]="password" required habbo-remote-data="'credentials'" placeholder="{{'FORM_PASSWORD_LABEL' | translate}}" class="form__input login-form__input">
     </div>
-    <!-- <habbo-claim-password class="form__helper login-form__helper"></habbo-claim-password> -->
+    <habbo-claim-password class="form__helper login-form__helper"></habbo-claim-password>
   </fieldset>
   <button [disabled]="loginInProgress" type="submit" class="login-form__button" translate="LOGIN_BUTTON"></button>
 </form>

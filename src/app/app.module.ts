@@ -83,6 +83,7 @@ import { PurseComponent } from './shop/purse/purse.component';
 import { VoucherRedeemComponent } from './shop/voucher-redeem/voucher-redeem.component';
 import { RegistrationFormComponent } from './registration/registration-form.component';
 import { AvatarCreateFormComponent } from './settings/avatar-selection/avatar-create/avatar-create-form.component';
+import { ClaimPasswordComponent } from './security/login/claim-password/claim-password.component';
 
 @NgModule({
   declarations: [
@@ -159,7 +160,8 @@ import { AvatarCreateFormComponent } from './settings/avatar-selection/avatar-cr
     PurseComponent,
     VoucherRedeemComponent,
     RegistrationFormComponent,
-    AvatarCreateFormComponent
+    AvatarCreateFormComponent,
+    ClaimPasswordComponent
   ],
   imports: [
     BrowserModule,
